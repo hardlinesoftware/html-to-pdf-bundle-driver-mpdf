@@ -8,9 +8,15 @@
             "email": "adamquaile@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "EP\\Bundle\\HtmlToPdfBundleMPdfDriver\\": ["src/", "tests/"]
+        }
+    },
     "require": {
         "eventpad/html-to-pdf-bundle": "*@dev",
-        "eventpad/mpdf-port-bundle": "1.1.*@dev"
+        "eventpad/mpdf-port-bundle": "1.1.*@dev",
+        "mikey179/vfsStream": "1.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "*"

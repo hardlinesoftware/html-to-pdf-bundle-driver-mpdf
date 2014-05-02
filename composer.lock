@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "c846e6aa8c8ac7a545f58d87ed1d13a7",
+    "hash": "f7df4010d067fe9b12314204e8b6dd57",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -135,12 +135,9 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:eventpad/html-to-pdf-bundle.git",
-                "reference": "2eb371dd8535c89e224598cd946c52c98b706ab2"
+                "reference": "3e9835ec9d217ace0b2c96a4b15ae4b325a79a66"
             },
             "require": {
-                "h4cc/wkhtmltopdf-amd64": "*",
-                "h4cc/wkhtmltopdf-i386": "*",
-                "mikehaertl/phpwkhtmltopdf": "1.2.*",
                 "php": ">=5.4",
                 "symfony/dependency-injection": "*",
                 "symfony/http-foundation": "*",
@@ -149,6 +146,9 @@
             "require-dev": {
                 "mikey179/vfsstream": "1.2.*",
                 "phpunit/phpunit": "*"
+            },
+            "suggest": {
+                "eventpad/html-to-pdf-bundle-driver-mpdf": "Generate PDFs using the mPDF driver"
             },
             "type": "symfony-bundle",
             "autoload": {
@@ -170,7 +170,7 @@
                 "pdf",
                 "pdf-to-html"
             ],
-            "time": "2014-04-28 16:32:27"
+            "time": "2014-05-02 11:32:03"
         },
         {
             "name": "eventpad/mpdf-port-bundle",
@@ -229,133 +229,34 @@
             "time": "2013-12-12 17:29:36"
         },
         {
-            "name": "h4cc/wkhtmltopdf-amd64",
-            "version": "0.12.0",
+            "name": "mikey179/vfsStream",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/h4cc/wkhtmltopdf-amd64.git",
-                "reference": "ebaa56a8ba0ae70a147ee70d544abf743db290d3"
+                "url": "https://github.com/mikey179/vfsStream.git",
+                "reference": "063fb10633f10c5ccbcac26227e94f46d9336f90"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/h4cc/wkhtmltopdf-amd64/zipball/ebaa56a8ba0ae70a147ee70d544abf743db290d3",
-                "reference": "ebaa56a8ba0ae70a147ee70d544abf743db290d3",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/wkhtmltopdf-amd64"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL Version 3"
-            ],
-            "authors": [
-                {
-                    "name": "Julius Beckmann",
-                    "email": "github@h4cc.de"
-                }
-            ],
-            "description": "Convert html to pdf using webkit (qtwebkit). Static linked linux binary for amd64 systems.",
-            "homepage": "http://wkhtmltopdf.org/",
-            "keywords": [
-                "binary",
-                "convert",
-                "pdf",
-                "snapshot",
-                "thumbnail",
-                "wkhtmltopdf"
-            ],
-            "time": "2014-02-11 21:33:07"
-        },
-        {
-            "name": "h4cc/wkhtmltopdf-i386",
-            "version": "0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/h4cc/wkhtmltopdf-i386.git",
-                "reference": "7afbb1468b65305b940fce9c8a9574cb7c0f17b4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/h4cc/wkhtmltopdf-i386/zipball/7afbb1468b65305b940fce9c8a9574cb7c0f17b4",
-                "reference": "7afbb1468b65305b940fce9c8a9574cb7c0f17b4",
-                "shasum": ""
-            },
-            "bin": [
-                "bin/wkhtmltopdf-i386"
-            ],
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "LGPL Version 3"
-            ],
-            "authors": [
-                {
-                    "name": "Julius Beckmann",
-                    "email": "github@h4cc.de"
-                }
-            ],
-            "description": "Convert html to pdf using webkit (qtwebkit). Static linked linux binary for i386 systems.",
-            "homepage": "http://wkhtmltopdf.org/",
-            "keywords": [
-                "binary",
-                "convert",
-                "pdf",
-                "snapshot",
-                "thumbnail",
-                "wkhtmltopdf"
-            ],
-            "time": "2014-02-11 22:00:57"
-        },
-        {
-            "name": "mikehaertl/phpwkhtmltopdf",
-            "version": "1.2.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mikehaertl/phpwkhtmltopdf.git",
-                "reference": "75e29576f6b216548e257348f3ed1f8028622359"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mikehaertl/phpwkhtmltopdf/zipball/75e29576f6b216548e257348f3ed1f8028622359",
-                "reference": "75e29576f6b216548e257348f3ed1f8028622359",
+                "url": "https://api.github.com/repos/mikey179/vfsStream/zipball/063fb10633f10c5ccbcac26227e94f46d9336f90",
+                "reference": "063fb10633f10c5ccbcac26227e94f46d9336f90",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.0.0"
-            },
-            "suggest": {
-                "h4cc/wkhtmltopdf-amd64": "wkhtmltopdf static linked linux binary for amd64 systems.",
-                "h4cc/wkhtmltopdf-i386": "wkhtmltopdf static linked linux binary for i386 systems."
+                "php": ">=5.3.0"
             },
             "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
             "autoload": {
-                "classmap": [
-                    "WkHtmlToPdf.php"
-                ]
+                "psr-0": {
+                    "org\\bovigo\\vfs\\": "src/main/php"
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "BSD"
             ],
-            "authors": [
-                {
-                    "name": "Michael Haertl",
-                    "email": "haertl.mike@gmail.com"
-                }
-            ],
-            "description": "A slim PHP wrapper around wkhtmltopdf with an easy to use and clean OOP interface",
-            "homepage": "http://mikehaertl.github.com/phpwkhtmltopdf/",
-            "keywords": [
-                "pdf"
-            ],
-            "time": "2014-05-01 08:28:13"
+            "homepage": "http://vfs.bovigo.org/",
+            "time": "2013-04-01 10:41:02"
         },
         {
             "name": "psr/log",
