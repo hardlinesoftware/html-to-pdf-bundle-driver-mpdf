@@ -1,0 +1,17 @@
+{
+    "name": "eventpad/html-to-pdf-bundle-driver-mpdf",
+    "description": "mPDF driver implementation for html-to-pdf-bundle",
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Adam Quaile",
+            "email": "adamquaile@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}
