@@ -1,9 +1,6 @@
 {
     "name": "eventpad/html-to-pdf-bundle-driver-mpdf",
     "description": "mPDF driver implementation for html-to-pdf-bundle",
-    "require-dev": {
-        "phpunit/phpunit": "*"
-    },
     "license": "proprietary",
     "authors": [
         {
@@ -12,6 +9,16 @@
         }
     ],
     "require": {
-
-    }
+        "eventpad/html-to-pdf-bundle": "*@dev",
+        "eventpad/mpdf-port-bundle": "1.1.*@dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://repo.eventpadint.com"
+        }
+    ]
 }
