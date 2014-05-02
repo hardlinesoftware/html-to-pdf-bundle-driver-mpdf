@@ -7,12 +7,18 @@ use EP\Bundle\HtmlToPdfBundle\Drivers\Features\SupportsPageMarginsInterface;
 use EP\Bundle\HtmlToPdfBundle\Drivers\DriverInterface;
 
 use Symfony\Component\Process\Process;
+use TFox\MpdfPortBundle\Service\MpdfService;
 
 class MPdfDriver implements DriverInterface
 {
+    /**
+     * @var \TFox\MpdfPortBundle\Service\MpdfService
+     */
+    private $service;
 
     public function __construct()
     {
+        $this->service = new MpdfService();
     }
 
     /**
@@ -25,6 +31,12 @@ class MPdfDriver implements DriverInterface
      */
     public function generate($html, $outfile)
     {
+        $this->service->generatePdf($html, [
+
+            'outputFilename'    => $outfile,
+            'outputDest'        => 'F'
+        ]);
+
         return true;
     }
 
